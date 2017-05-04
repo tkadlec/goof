@@ -6,8 +6,7 @@ pipeline {
         sh '''node -v
 npm prune
 npm install'''
-        sh '''snyk auth
-snyk test'''
+        sh 'snyk test'
       }
     }
     stage('Build') {
@@ -17,6 +16,6 @@ snyk test'''
     }
   }
   environment {
-    SNYK_TOKEN = '8b761a35-c6b8-47bc-8c80-44ec3e7133b8'
+    SNYK_TOKEN = 'credentials(\'SNYK_TOKEN\')'
   }
 }
