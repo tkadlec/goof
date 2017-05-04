@@ -5,8 +5,7 @@ pipeline {
       steps {
         sh '''node -v
 npm prune
-npm install
-npm test'''
+npm install'''
         sh 'snyk test'
       }
     }
