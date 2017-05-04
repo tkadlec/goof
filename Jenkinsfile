@@ -11,7 +11,8 @@ npm install'''
     }
     stage('Build') {
       steps {
-        sh 'snyk monitor'
+        sh '''snyk protect
+snyk monitor'''
       }
     }
   }
