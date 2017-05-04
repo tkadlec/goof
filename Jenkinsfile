@@ -16,6 +16,6 @@ npm install'''
     }
   }
   environment {
-    SNYK_TOKEN = 'credentials(\'SNYK_TOKEN\')'
+    SNYK_TOKEN = '8b761a35-c6b8-47bc-8c80-44ec3e7133b8'
   }
 }
