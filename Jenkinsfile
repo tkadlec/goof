@@ -6,7 +6,8 @@ pipeline {
         sh '''node -v
 npm prune
 npm install'''
-        sh 'snyk test'
+        sh '''snyk auth
+snyk test'''
       }
     }
     stage('Build') {
